@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #F5F5F5;
+  --color-bg-secondary: #173B45;
+  --color-box: #FF6500;
+  --box-border: #1E3E62;
+  --box-sd: #0B192C;
+  --heading-1: #FF6500;
+  --heading-2: #1E3E62;
+  --heading-3: #111111;
+}
+
+html.dark {
+  --color-bg: #0B192C;
+  --color-bg-secondary: #FF6500;
+  --color-box: #FF6500;
+  --box-border: #1E3E62;
+  --box-sd: #0B192C;
+  --heading-1: #FF6500;
+  --heading-2: #DADADA;
+  --heading-3: #DADADA;
+}
+
+@layer utilities {
+  .bg-body {
+    background-color: var(--color-bg);
+  }
+
+  .bg-box-bg {
+    background-color: var(--color-box);
+  }
+
+  .text-heading-1 {
+    color: var(--heading-1);
+  }
+
+  .text-heading-2 {
+    color: var(--heading-2);
+  }
+
+  .text-heading-3 {
+    color: var(--heading-3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
