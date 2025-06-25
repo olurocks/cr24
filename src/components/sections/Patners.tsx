@@ -1,22 +1,15 @@
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 import { useState, useEffect } from "react";
-import bingx from "../../assets/bingx.jpg";
-import axiom from "../../assets/axiom.jpg";
-import gmgn from "../../assets/gmgn.jpg";
-import hyperliquid from "../../assets/hyperliquid.jpg";
-import binance from "../../assets/binance.jpg";
-// import mexc from "../../assets/mexc.jpg";
-import kucoin from "../../assets/kucoin.jpg";
 
 const logos = [
-  { name: "bingx", src: bingx },
-  { name: "axiom", src: axiom },
-  { name: "gmgn", src: gmgn },
-  { name: "hyperliquid", src: hyperliquid },
-  { name: "binance", src: binance },
-  // { name: "mexc", src: mexc },
-  { name: "kucoin", src: kucoin },
+  "bingx",
+  "axiom",
+  "gmgn",
+  "Hyperliquid",
+  "Binance",
+  // "mexc",
+  "kucoin",
 ];
 
 export const Patners = () => {
@@ -90,7 +83,7 @@ export const Patners = () => {
                       } group hover:border-primary/40 hover:shadow-md`}
                     >
                       <img
-                        src={logo.src}
+                        src={`${logo}.jpg`}
                         width={isCenter ? 120 : 100}
                         height={isCenter ? 72 : 60}
                         alt={`${logo} logo`}
@@ -106,7 +99,7 @@ export const Patners = () => {
                           if (img.parentElement) {
                             img.parentElement.innerHTML = `
                               <div class="flex items-center justify-center w-20 h-8 text-xs font-medium text-gray-400 bg-gray-100 rounded">
-                                ${logo.name.toUpperCase()}
+                                ${logo.toUpperCase()}
                               </div>
                             `;
                           }
