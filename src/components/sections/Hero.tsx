@@ -66,7 +66,7 @@ export const Hero = () => {
 
         <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-4xl">
           <img
-            src="src\assets\istock.png"
+            src="src/assets/istock.png"
             alt="Hero image"
             width={3000}
             height={3000}
