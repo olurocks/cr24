@@ -32,7 +32,7 @@ export const Navbar = () => {
               <div className="bg-body  box-sd flex items-center justify-center">
                 <img src={logo} alt="CR2140 Logo" className="w-12 h-12" />
               </div>
-              <div className="text-xl font-semibold text-heading-1">CR2140</div>
+              <div className="text-xl font-semibold footer-header">CR2140</div>
             </a>
           </div>
 
@@ -137,10 +137,10 @@ export const Navbar = () => {
           <div className="lg:hidden mt-4 py-4 border-t border-box-border animate-fadeIn">
             <ul className="flex flex-col gap-4 mb-4">
               {navItems.map((item, key) => (
-                <NavItem 
-                  href={item.href} 
-                  text={item.text} 
-                  key={key} 
+                <NavItem
+                  href={item.href}
+                  text={item.text}
+                  key={key}
                   onClick={() => setIsMobileMenuOpen(false)}
                 />
               ))}
