@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #F5F5F5;
-  --color-bg-secondary: #173B45;
-  --color-box: #FF6500;
-  --box-border: #1E3E62;
-  --box-sd: #0B192C;
-  --heading-1: #FF6500;
-  --heading-2: #1E3E62;
-  --heading-3: #111111;
+  --color-bg: #f5f5f5;
+  --color-bg-secondary: #173b45;
+  --color-box: #ff6500;
+  --box-border: #1e3e62;
+  --box-sd: #0b192c;
+  --heading-1: #ff6500;
+  --heading-2: #dadada;
+  --heading-3: #173b45;
+  --subheading: #173b45;
 }
 
 html.dark {
-  --color-bg: #0B192C;
-  --color-bg-secondary: #FF6500;
-  --color-box: #FF6500;
-  --box-border: #1E3E62;
-  --box-sd: #0B192C;
-  --heading-1: #FF6500;
-  --heading-2: #DADADA;
-  --heading-3: #DADADA;
+  --color-bg: #0b192c;
+  --color-bg-secondary: #ff6500;
+  --color-box: #ff6500;
+  --box-border: #1e3e62;
+  --box-sd: #0b192c;
+  --heading-1: #1e3e62;
+  --heading-2: #dadada;
+  --heading-3: #dadada;
+  --subheading: #dadada;
 }
 
 @layer utilities {
@@ -27,8 +29,28 @@ html.dark {
     background-color: var(--color-bg);
   }
 
+  .bg-navbar {
+    background-color: var(--color-bg-secondary);
+  }
+
   .bg-box-bg {
     background-color: var(--color-box);
+  }
+
+  .text-subheading {
+    color: var(--subheading);
+  }
+
+  .box-sd {
+    box-shadow: 0 4px 6px -1px var(--box-sd), 0 2px 4px -1px var(--box-sd);
+  }
+
+  .text-body-text {
+    color: var(--heading-2);
+  }
+
+  .toggle-bg {
+    background-color: var(--toggle-bg);
   }
 
   .text-heading-1 {

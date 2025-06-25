@@ -1,19 +1,18 @@
 import Layout from "./components/Layout"
-import AboutUs from "./components/sections/AboutUs"
-import { Navbar } from "./components/elements/Navbar"
-
+import { Patners } from "./components/sections/Patners";
+import { Hero } from "./components/sections/Hero";
+import { Services } from "./components/sections/Services";
 
 function App() {
-
   return (
-
     <>
-    <Layout title= "CR24">
-    <Navbar/>
-    </Layout>
-
+      <Layout title="CR24">
+        <Hero />
+        <Patners />
+        <Services />
+      </Layout>
     </>
-  )
+  );
 }
 
 export default App

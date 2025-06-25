@@ -10,3 +10,12 @@ interface TitleProps {
       </h1>
     );
   };
+
+  export const Subtitle = ({ children }: TitleProps) => {
+    return (
+      <h2 className="text-subheading font-semibold text-xl sm:text-2xl md:text-3xl">
+        {" "}
+        {children}{" "}
+      </h2>
+    );
+  };
