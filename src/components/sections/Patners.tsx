@@ -83,7 +83,7 @@ export const Patners = () => {
                       } group hover:border-primary/40 hover:shadow-md`}
                     >
                       <img
-                        src={`/src/assets/${logo}.jpeg`}
+                        src={`src/assets/${logo}.jpg`}
                         width={isCenter ? 120 : 100}
                         height={isCenter ? 72 : 60}
                         alt={`${logo} logo`}

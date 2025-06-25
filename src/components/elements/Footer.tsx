@@ -44,7 +44,9 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img src={logo} className="w-8 h-8" alt="CR2140 Logo" />
-              <span className="text-xl font-bold text-heading-1">CR2140</span>
+              <span className="text-xl font-bold" style={{ color: "#173b45" }}>
+                CR2140
+              </span>
             </div>
             <p className="text-body-text mb-6 max-w-md leading-relaxed">
               Empowering businesses with cutting-edge AI solutions. Transform
