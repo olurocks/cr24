@@ -10,6 +10,8 @@
   --heading-2: #dadada;
   --heading-3: #173b45;
   --subheading: #173b45;
+  --footer-header: #ff6500;
+
 }
 
 html.dark {
@@ -22,11 +24,16 @@ html.dark {
   --heading-2: #dadada;
   --heading-3: #dadada;
   --subheading: #dadada;
+  --footer-header: #173b45;
 }
 
 @layer utilities {
   .bg-body {
     background-color: var(--color-bg);
+  }
+
+  .footer-header {
+    color: var(--footer-header);
   }
 
   .bg-navbar {
