@@ -2,6 +2,7 @@ import { Container } from "../shared/Container";
 import logo from "../../assets/icon.svg";
 import { navItems } from "./Navbar";
 import { NavItem } from "../shared/NavItem";
+import { FaTwitter, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,10 +29,19 @@ export const Footer = () => {
   };
 
   const socialLinks = [
-    { name: "Twitter", href: "#", icon: "🐦" },
-    { name: "LinkedIn", href: "#", icon: "💼" },
-    { name: "GitHub", href: "#", icon: "🐙" },
-    { name: "Discord", href: "#", icon: "💬" },
+    { name: "Twitter", href: "#", icon: <FaTwitter /> },
+    { name: "LinkedIn", href: "#", icon: <FaLinkedin /> },
+    { name: "GitHub", href: "#", icon: <FaGithub /> },
+    { name: "Discord", href: "#", icon: <FaDiscord /> },
+    {
+      name: "Telegram",
+      href: "https://t.me/CR2140",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+          <path d="M9.993 15.674l-.39 4.13c.56 0 .803-.24 1.096-.527l2.63-2.497 5.454 3.98c1 .552 1.71.262 1.96-.924l3.553-16.66c.323-1.497-.547-2.08-1.52-1.73L1.7 9.34c-1.46.57-1.44 1.38-.25 1.75l4.37 1.37 10.16-6.41c.48-.31.92-.14.56.2" />
+        </svg>
+      ),
+    },
   ];
 
   return (
@@ -58,7 +68,9 @@ export const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors duration-300 flex items-center justify-center text-white hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors duration-300 flex items-center justify-center text-white hover:text-white hover:scale-110"
                   aria-label={social.name}
                 >
                   <span className="text-lg">{social.icon}</span>
