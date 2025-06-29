@@ -35,7 +35,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative mt-20 bg-navbar">
+    <footer className="relative mt-20 bg-carousel">
       {/* Main Footer Content */}
       <Container className="pt-16 pb-8">
         {/* Top Section */}

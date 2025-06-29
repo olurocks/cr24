@@ -23,7 +23,7 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 py-6 bg-navbar">
+    <header className="absolute inset-x-0 top-0 z-50 py-6 bg-body">
       <Container>
         <nav className="flex items-center justify-between gap-6 w-full">
           {/* Logo */}
@@ -32,12 +32,12 @@ export const Navbar = () => {
               <div className="bg-body  box-sd flex items-center justify-center">
                 <img src={logo} alt="CR2140 Logo" className="w-12 h-12" />
               </div>
-              <div className="text-xl font-semibold footer-header">CR2140</div>
+              <div className="text-xl font-semibold text-heading-3">CR2140</div>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center flex-1 text-heading-2">
+          <div className="hidden lg:flex items-center justify-center flex-1 text-heading-3">
             <ul className="flex items-center gap-8">
               {navItems.map((item, key) => (
                 <NavItem href={item.href} text={item.text} key={key} />
@@ -55,7 +55,7 @@ export const Navbar = () => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="flex items-center justify-center w-8 h-8 rounded-full border border-box-border text-heading-2 transform transition duration-300 hover:scale-110 cursor-pointer transition-colors"
+              className="flex items-center justify-center w-8 h-8 rounded-full border border-box-border text-heading-3 transform transition duration-300 hover:scale-110 cursor-pointer transition-colors"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (

@@ -11,7 +11,8 @@
   --heading-3: #173b45;
   --subheading: #173b45;
   --footer-header: #ff6500;
-
+  --carousel-bg: #173b45;
+  --signin-bg: #173b45;
 }
 
 html.dark {
@@ -25,11 +26,17 @@ html.dark {
   --heading-3: #dadada;
   --subheading: #dadada;
   --footer-header: #173b45;
+  --carousel-bg: #173b45;
+  --signin-bg: #ff6500;
 }
 
 @layer utilities {
   .bg-body {
     background-color: var(--color-bg);
+  }
+
+  .bg-signin {
+    background-color: var(--signin-bg);
   }
 
   .footer-header {
@@ -38,6 +45,10 @@ html.dark {
 
   .bg-navbar {
     background-color: var(--color-bg-secondary);
+  }
+
+  .bg-carousel {
+    background-color: var(--carousel-bg);
   }
 
   .bg-box-bg {
@@ -82,8 +93,14 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {

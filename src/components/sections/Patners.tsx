@@ -48,28 +48,25 @@ export const Patners = () => {
         </div>
 
         <div className="flex items-center justify-center overflow-hidden py-8">
-          {/* MAIN CHANGE: Added fixed width container and proper horizontal translation */}
-          <div className="relative w-full max-w-4xl h-20 flex items-center justify-center">
+          <div className="relative w-full max-w-4xl h-26 flex items-center justify-center">
             <div className="absolute inset-0 flex items-center justify-center">
               {getVisibleLogos().map(({ logo, originalIndex, position }) => {
                 const isCenter = position === 0;
                 const distance = Math.abs(position);
 
-                // MAIN CHANGE: Calculate horizontal offset for sliding effect
-                const horizontalOffset = position * 140; // 140px spacing between logos
+                const horizontalOffset = position * 190;
 
                 return (
                   <div
                     key={`${logo}-${originalIndex}`}
                     className={`absolute transition-all duration-700 ease-in-out flex-shrink-0 ${
                       isCenter
-                        ? "scale-110 z-20"
+                        ? "scale-200 z-20"
                         : distance === 1
                         ? "scale-95 opacity-90 z-10"
                         : "scale-80 opacity-60 z-0"
                     }`}
                     style={{
-                      // MAIN CHANGE: Use translateX for horizontal sliding
                       transform: `translateX(${horizontalOffset}px) scale(${
                         isCenter ? 1.1 : distance === 1 ? 0.95 : 0.8
                       })`,
@@ -93,7 +90,6 @@ export const Patners = () => {
                             : "grayscale hover:grayscale-0"
                         }`}
                         onError={(e) => {
-                          // Fallback if image doesn't load
                           const img = e.target as HTMLImageElement;
                           img.style.display = "none";
                           if (img.parentElement) {
@@ -112,22 +108,6 @@ export const Patners = () => {
             </div>
           </div>
         </div>
-
-        {/* Optional: Add dots indicator
-        <div className="flex justify-center gap-2">
-          {logos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-primary scale-125"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to logo ${index + 1}`}
-            />
-          ))}
-        </div> */}
       </Container>
     </section>
   );

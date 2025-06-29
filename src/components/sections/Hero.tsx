@@ -15,7 +15,7 @@ export const Hero = () => {
           <h1 className="text-heading-3 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
             Welcome To
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 ml-2">
+            <span className="text-transparent bg-clip-text text-heading-1  ml-2">
               CR2140{" "}
             </span>
           </h1>
